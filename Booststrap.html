@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+        .divcss5red{ background:#F00; color:#FFF}
+        .divcss5black{ background:#ccc; color:#FFF}
+    </style>
+</head>
+<body>
+<!--表单控件状态——禁用状态 对于整个禁用的域fieldset中，如果legend中有输入框的话，这个输入框是无法被禁用-->
+<h3>示例1</h3>
+<form role="form" class="form-horizontal">
+    <div class="form-group">
+        <div class="col-xs-6">
+            <input class="form-control input-lg" type="text" placeholder="不是焦点状态下效果">
+        </div>
+        <div class="col-xs-6">
+            <input class="form-control input-lg" id="disabledInput" type="text" placeholder="表单已被禁用，不可输入" disabled>
+        </div>
+    </div>
+</form>
+<br>
+<br>
+<br>
+<h3>示例2</h3>
+<form role="form">
+    <fieldset disabled>
+        <div class="form-group">
+            <label for="disabledTextInput">禁用的输入框</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="禁止输入">
+        </div>
+        <div class="form-group">
+            <label for="disabledSelect">禁用的下拉框</label>
+            <select id="disabledSelect" class="form-control">
+                <option>不可选择</option>
+            </select>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> 无法选择
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">提交</button>
+    </fieldset>
+</form>
+<br>
+<br>
+<br>
+<h3>示例3</h3>
+<form role="form">
+    <fieldset disabled>
+        <legend><input type="text" class="form-control" placeholder="显然我颜色变灰了，但是我没被禁用，不信？单击试一下" /></legend>
+        <div class="form-group">
+            <label for="disabledTextInput">禁用的输入框</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="禁止输入">
+        </div>
+        <div class="form-group">
+            <label for="disabledSelect">禁用的下拉框</label>
+            <select id="disabledSelect" class="form-control">
+                <option>不可选择</option>
+            </select>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> 无法选择
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">提交</button>
+    </fieldset>
+</form>
+
+<!--表单控件状态——验证状态-->
+<h3>示例1</h3>
+<form role="form">
+    <div class="form-group has-success">
+        <label class="control-label" for="inputSuccess1">成功状态</label>
+        <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+    </div>
+    <div class="form-group has-warning">
+        <label class="control-label" for="inputWarning1">警告状态</label>
+        <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+    </div>
+    <div class="form-group has-error">
+        <label class="control-label" for="inputError1">错误状态</label>
+        <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+    </div>
+</form>
+<br>
+<br>
+<br>
+<h3>示例2</h3>
+<form role="form">
+    <div class="form-group has-success has-feedback">
+        <label class="control-label" for="inputSuccess1">成功状态</label>
+        <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+    <div class="form-group has-warning has-feedback">
+        <label class="control-label" for="inputWarning1">警告状态</label>
+        <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+    </div>
+    <div class="form-group has-error has-feedback">
+        <label class="control-label" for="inputError1">错误状态</label>
+        <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+
+</form>
+
+<!--表单提示信息-->
+<h3>示例1</h3>
+<form role="form">
+    <div class="form-group has-success has-feedback">
+        <label class="control-label" for="inputSuccess1">成功状态</label>
+        <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+        <span class="help-block">你输入的信息是正确的</span>
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+    <div class="form-group has-warning has-feedback">
+        <label class="control-label" for="inputWarning1">警告状态</label>
+        <input type="text" class="form-control" id="inputWarning1" placeholder="警告状态">
+        <span class="help-block">请输入正确信息</span>
+        <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+    </div>
+    <div class="form-group has-error has-feedback">
+        <label class="control-label" for="inputError1">错误状态</label>
+        <input type="text" class="form-control" id="inputError1" placeholder="错误状态">
+        <span class="help-block">你输入的信息是错误的</span>
+        <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+    </div>
+</form>
+<br>
+<br>
+<br>
+<h3>示例2</h3>
+<form role="form">
+    <div class="form-group">
+        <label class="control-label" for="inputSuccess1">成功状态</label>
+        <div class="row">
+            <div class="col-xs-6">
+                <input type="text" class="form-control" id="inputSuccess1" placeholder="成功状态" >
+            </div>
+            <span class="col-xs-6 help-block">你输入的信息是正确的</span>
+        </div>
+    </div>
+</form>
+
+<!--按钮--定制风格-->
+<button class="btn" type="button">基础按钮.btn</button>
+<button class="btn btn-default" type="button">默认按钮.btn-default</button>
+<button class="btn btn-primary" type="button">主要按钮.btn-primary</button>
+<button class="btn btn-success" type="button">成功按钮.btn-success</button>
+<button class="btn btn-info" type="button">信息按钮.btn-info</button>
+<button class="btn btn-warning" type="button">警告按钮.btn-warning</button>
+<button class="btn btn-danger" type="button">危险按钮.btn-danger</button>
+<button class="btn btn-link" type="button">链接按钮.btn-link</button>
+
+<!--多标签支持-->
+<button class="btn btn-default" type="button">button标签按钮</button>
+<input type="submit" class="btn btn-default" value="input标签按钮"/>
+
+<span class="btn btn-default">span标签按钮</span>
+<div class="btn btn-default">div标签按钮</div>
+<a class="btn btn-default">a标签按钮</a>
+
+<!--按钮大小-->
+<button class="btn btn-primary btn-lg" type="button">大型按钮.btn-lg</button>
+<button class="btn btn-primary" type="button">正常按钮</button>
+<button class="btn btn-primary btn-sm" type="button">小型按钮.btn-sm</button>
+<button class="btn btn-primary btn-xs" type="button">超小型按钮.btn-sm</button>
+
+<!--块状按钮-->
+<button class="btn btn-primary btn-lg btn-block" type="button">大型按钮.btn-lg</button>
+<button class="btn btn-primary btn-block" type="button">正常按钮</button>
+<button class="btn btn-primary btn-sm btn-block" type="button">小型按钮.btn-sm</button>
+<button class="btn btn-primary btn-xs btn-block" type="button">超小型按钮.btn-xs</button>
+
+<!--按钮状态——活动状态-->
+<button class="btn" type="button">基础按钮.btn</button>
+<button class="btn btn-default" type="button">默认按钮.btn-default</button>
+<button class="btn btn-primary" type="button">主要按钮.btn-primary</button>
+<button class="btn btn-success" type="button">成功按钮.btn-success</button>
+<button class="btn btn-info" type="button">信息按钮.btn-info</button>
+<button class="btn btn-warning" type="button">警告按钮.btn-warning</button>
+<button class="btn btn-danger" type="button">危险按钮.btn-danger</button>
+<button class="btn btn-link" type="button">链接按钮.btn-link</button>
+
+<!--按钮状态——禁用状态-->
+<button class="btn btn-primary btn-lg btn-block" type="button" disabled="disabled">通过disabled属性禁用按钮</button>
+<button class="btn btn-primary btn-block disabled" type="button">通过添加类名disabled禁用按钮</button>
+<button class="btn btn-primary btn-sm btn-block" type="button">未禁用的按钮</button>
+<button class="btn btn-primary btn-block disabled" type="button">reset</button>
+
+<!--图像-->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <img   alt="140x140" src="http://placehold.it/140x140">
+            <div>默认图片</div>
+        </div>
+        <div class="col-sm-4">
+            <img  class="img-rounded" alt="140x140" src="http://placehold.it/140x140">
+            <div>圆角图片</div>
+        </div>
+        <div class="col-sm-4">
+            <img  class="img-circle" alt="140x140" src="http://placehold.it/140x140">
+            <div>圆形图片</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <img  class="img-thumbnail" alt="140x140" src="http://placehold.it/140x140">
+                <div>缩略图</div>
+            </div>
+            <div class="col-sm-6">
+                <img  class="img-responsive" alt="140x140" src="http://placehold.it/140x140" />
+                <div>响应式图片</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--图标-->
+<span class="glyphicon glyphicon-search"></span>
+<span class="glyphicon glyphicon-asterisk"></span>
+<span class="glyphicon glyphicon-plus"></span>
+<span class="glyphicon glyphicon-cloud"></span>
+
+<!--网格系统实现原理-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+    </div>
+    <div class="row">
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+        <div class="col-md-1">.col-md-1</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-8">.col-md-8</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-6">.col-md-6</div>
+        <div class="col-md-3">.col-md-3</div>
+    </div>
+</div>
+
+<!--大小-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">.col-lg-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">.col-sm-4</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">.col-xs-4</div>
+    </div>
+</div>
+
+<!--偏移-->
+<div class="container">
+    <h4>列向右移动四列的间距</h4>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-2 col-md-offset-4">列向右移动四列的间距</div>
+        <div class="col-md-2">.col-md-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 col-md-offset-4">列向右移动四列的间距</div>
+    </div>
+</div>
+<br />
+<h4>发生行断裂</h4>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-2 col-md-offset-4">列向右移动四列的间距</div>
+        <div class="col-md-2">.col-md-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 col-md-offset-4">列向右移动四列的间距</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">.col-md-3</div>
+        <div class="col-md-3 col-md-offset-3">col-md-offset-3</div>
+        <div class="col-md-4">col-md-4</div>
+    </div>
+</div>
+
+<!--列的嵌套-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 divcss5black">
+            我的里面嵌套了一个网格
+            <div class="row">
+                <div class="col-md-6 divcss5red">col-md-6</div>
+                <div class="col-md-6 divcss5red">col-md-6</div>
+            </div>
+        </div>
+        <div class="col-md-4 divcss5black">col-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 divcss5black">.col-md-4</div>
+        <div class="col-md-8 divcss5black">
+            我的里面嵌套了一个网格
+            <div class="row">
+                <div class="col-md-4 divcss5red">col-md-4</div>
+                <div class="col-md-4 divcss5red">col-md-4</div>
+                <div class="col-md-4 divcss5red">col-md-4</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--下拉菜单-->
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+        选择你喜欢吃的水果
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">苹果</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">香蕉</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">梨</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">桃</a></li>
+    </ul>
+</div>
+
+<!--下拉分隔线-->
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+        下拉菜单
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+    </ul>
+</div>
+
+
+<!--菜单标题-->
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+        下拉菜单
+        <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+        <li role="presentation" class="dropdown-header">第一部分菜单头部</li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation" class="divider"></li>
+        <li role="presentation" class="dropdown-header">第二部分菜单头部</li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">下拉菜单项</a></li>
+    </ul>
+</div>
+
+<!--下拉菜单（对齐方式）-->
+
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+</body>
+</html>
